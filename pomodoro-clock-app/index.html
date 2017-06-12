@@ -15,8 +15,43 @@
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=UnifrakturCook:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Coda" rel="stylesheet">
 </head>
 
 <body>
+  <div class="container">
+    <div class="settings-container">
+      <div class="break-settings">
+        <p>BREAK LENGTH</p>
+        <div class="break">
+          <button id="minus-break">-</button>
+          <p id="break-time">5</p>
+          <button id="add-break">+</button>
+        </div>
+      </div>
+      <div class="session-settings">
+        <p>SESSION LENGTH</p>
+        <div class="session">
+          <button id="minus-session">-</button>
+          <p id="session-time">25</p>
+          <button id="add-session">+</button>
+        </div>
+      </div>
+    </div>
+    <div class="clock-container">
+      <h1 id="status">Please select the desired break and session time.</h1>
+      <h6 id="tips">(Recommended duration is 25mins session with 5mins break)</h6>
+      <h1>0</h1>
+      <span>loading bar goes here</span>
+      <div class="controls">
+        <button><i class="material-icons" style="font-size:48px" id="start-button">play_arrow</i></button>
+        <!--<button><i class="material-icons" style="font-size:48px" id="pause-button">pause</i></button>-->
+        <button><i class="material-icons" style="font-size:48px" id="reset-button">replay</i></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/main.min.js"></script>
 </body>
 </html>
