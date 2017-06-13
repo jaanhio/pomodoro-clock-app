@@ -24,28 +24,29 @@
       <div class="break-settings">
         <p>BREAK LENGTH</p>
         <div class="break">
-          <button id="minus-break">-</button>
-          <p id="break-time">5</p>
           <button id="add-break">+</button>
+          <p id="break-time">5</p>
+          <button id="minus-break">-</button>
         </div>
       </div>
       <div class="session-settings">
         <p>SESSION LENGTH</p>
         <div class="session">
-          <button id="minus-session">-</button>
-          <p id="session-time">25</p>
           <button id="add-session">+</button>
+          <p id="session-time">25</p>
+          <button id="minus-session">-</button>
         </div>
       </div>
     </div>
     <div class="clock-container">
       <h1 id="status">Please select the desired break and session time.</h1>
-      <h6 id="tips">(Recommended duration is 25mins session with 5mins break)</h6>
-      <h1>0</h1>
+      <!--<h6 id="tips">(Recommended duration is 25mins session with 5mins break)</h6>-->
+      <h1 id="timer">25</h1>
+      <p id="timer-unit">minutes</p>
       <span>loading bar goes here</span>
       <div class="controls">
-        <button><i class="material-icons" style="font-size:48px" id="start-button">play_arrow</i></button>
-        <!--<button><i class="material-icons" style="font-size:48px" id="pause-button">pause</i></button>-->
+        <button><i class="material-icons" style="font-size:48px" id="start-pause-button">play_arrow</i></button>
+        <button><i class="material-icons" style="font-size:48px" id="pause-button">pause</i></button>
         <button><i class="material-icons" style="font-size:48px" id="reset-button">replay</i></button>
       </div>
     </div>
