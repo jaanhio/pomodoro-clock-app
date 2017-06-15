@@ -48,10 +48,12 @@ button{
 }
 
 .controls{
-  margin: 20px 0 0 0;
+  position: relative;
+  margin: 20px auto 0 auto;
+  //text-align: center;
 }
 .material-icons{
-  margin: 0 30px 0 30px;
+  //margin: 0 30px 0 30px;
   //font-size: 50px;
 }
 
@@ -72,8 +74,29 @@ i{
   display: none;
 }
 
+#start-pause-button, #reset-button{
+  position: absolute;
+  //top: -10px;
+  //left: 46%;
+  margin: -25px -20px;
+}
+
 #timer-unit{
   margin-top:-30px;
   font-size: 12px;
   font-weight: bold;
+}
+
+#loading-bar{
+  width: 50%;
+  //background-color: pink;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 2px;
+}
+
+#progress-bar{
+  width: 0%;
+  height: 10px;
+  background-color: green;
 }

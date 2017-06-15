@@ -5,6 +5,22 @@ var intervalSession;
 
 $(document).ready(function(){
 
+  function moveBar(){
+    var width = 1;
+    var id = setInterval(frame,1000);
+    function frame(){
+      if(width>=100){
+        clearInterval(id);
+      }
+      else{
+        width++;
+      }
+    }
+  }
+
+
+  $('#reset-button').hide();
+
   $('#minus-break').on('click',function(){
     if(breakLength>0){
     breakLength--;
@@ -47,8 +63,14 @@ $(document).ready(function(){
     $('#timer').html(sessionLength);
     $('#status').html("Please select the desired break and session time.");
     //$('#tips').show();
-    $('#start-pause-button').html("play_arrow");
+    //$('#start-pause-button').html("play_arrow");
+    $('#start-pause-button').show("slow");
+    $('.settings-container').show("slow");
+    $(this).hide();
     clearInterval(intervalSession);
+    //$('#progress-bar').css('width', '0%');
+    $('#progress-bar').stop();
+    $('#progress-bar').css('width', '0%');
   });
 
   $('#start-pause-button').on('click',function(){
@@ -60,9 +82,15 @@ $(document).ready(function(){
     }*/
     //$('#tips').hide();
 
-    if($(this).text().indexOf('play_arrow')> -1){
-      $(this).html("pause");
+    /*if($(this).text().indexOf('play_arrow')> -1){
+      $(this).html("replay");*/
+      /*$('#progress-bar').delay(1000).animate({
+        width:"100%"
+      }, sessionLength*1000);*/
 
+      $('.settings-container').hide("slow");
+      $('#reset-button').show("slow");
+      $(this).hide("slow");
       var tmpSession = sessionLength;
       var tmpBreak = breakLength;
 
@@ -73,6 +101,9 @@ $(document).ready(function(){
         //var tmpSession = sessionLength;
         //var tmpBreak = breakLength;
         $('#status').html("SESSION!");
+        /*$('#progress-bar').delay(1000).animate({
+          width:"100%"
+        }, sessionLength*1000);*/
         //$('#timer').html(sessionLength);
         if(sessionLength >= 0){
         console.log(sessionLength + " " + $('#status').text());
@@ -131,12 +162,12 @@ $(document).ready(function(){
         setInterval(countDownSession, 1000);
       }*/
 
-    }
-    else{
+    //}
+    /*else{
       $(this).html("play_arrow");
       clearInterval(intervalSession);
       $('#status').html("Time Paused!");
-    }
+    }*/
 
 
     //console.log(breakLength);
@@ -144,10 +175,12 @@ $(document).ready(function(){
 
   });
 
-  $('#pause-button').on('click',function(){
+  /*$('#pause-button').on('click',function(){
     $('#status').html("PAUSED!");
     //$('#tips').hide();
     $(this).hide();
     $('#start-button').show();
-  });
+  });*/
+
+
 });
