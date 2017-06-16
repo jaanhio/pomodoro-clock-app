@@ -100,3 +100,56 @@ i{
   height: 10px;
   background-color: green;
 }
+
+footer{
+  margin-top: 40px;
+}
+
+.name-container{
+  display: inline-block;
+  margin-top: -10px;
+  font-size: 15px;
+  //background-color: pink;
+  &:hover span.char3{
+    transform: translateX(0);
+  }
+  &:hover span.char2{
+    transform: translateX(0);
+  }
+  &:hover span.char6{
+    transform: translateX(0);
+  }
+}
+
+span{
+  display: inline-block;
+}
+//JIANHAO
+span.char2{
+  transform: translateX(3em);
+  transition: transform 500ms;
+}
+
+span.char3{
+  transform: translateX(-0.25em);
+  transition: transform 500ms;
+}
+
+/*span.char4{
+  transform: translateX();
+  transition: transform 500ms;
+}*/
+
+/*span.char5{
+  transform: translateX();
+  transition: transform 500ms;
+}*/
+
+span.char6{
+  transform: translateX(-3em);
+  transition: transform 500ms;
+}
+
+/*.name-container:hover span.char3{
+  transform: translateX(0);
+}*/
