@@ -89,7 +89,7 @@ $(document).ready(function(){
       }, sessionLength*1000);*/
 
       $('.settings-container').hide("slow");
-      $('#reset-button').show("slow");
+      $('#reset-button').css('transform','translateX(-0.25em)').show("slow");
       $(this).hide("slow");
       var tmpSession = sessionLength;
       var tmpBreak = breakLength;

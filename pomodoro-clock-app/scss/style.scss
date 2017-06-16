@@ -107,6 +107,7 @@ footer{
 
 .name-container{
   display: inline-block;
+  border-bottom: 1px dotted black;
   margin-top: -10px;
   font-size: 15px;
   //background-color: pink;
@@ -116,6 +117,12 @@ footer{
   &:hover span.char2{
     transform: translateX(0);
   }
+  &:hover span.char4{
+    transform: translateX(0);
+  }
+  &:hover span.char5{
+    transform: translateX(0);
+  }
   &:hover span.char6{
     transform: translateX(0);
   }
@@ -123,30 +130,31 @@ footer{
 
 span{
   display: inline-block;
+  margin-left: 0.5px;
 }
 //JIANHAO
 span.char2{
-  transform: translateX(3em);
+  transform: translateX(3.54em);
   transition: transform 500ms;
 }
 
 span.char3{
-  transform: translateX(-0.25em);
+  transform: translateX(0.34em);
   transition: transform 500ms;
 }
 
-/*span.char4{
-  transform: translateX();
+span.char4{
+  transform: translateX(0.32em);
   transition: transform 500ms;
-}*/
+}
 
-/*span.char5{
-  transform: translateX();
+span.char5{
+  transform: translateX(0.32em);
   transition: transform 500ms;
-}*/
+}
 
 span.char6{
-  transform: translateX(-3em);
+  transform: translateX(-3.21em);
   transition: transform 500ms;
 }
 
